@@ -76,7 +76,8 @@ model.summary()
 # In[11]:
 
 if (accuracy < 97.0):
-    execfile("/root/print.py")
+	print("less than 97")
+    #execfile("/root/print.py")
 else:
     b=("the model has been trained sussesfully with the accuracy of ",accuracy,"%")    
     f=open("/root/accuracy.txt","w")
