@@ -79,7 +79,7 @@ if (accuracy < 97.0):
     execfile("/root/print.py")
 else:
     b=("the model has been trained sussesfully with the accuracy of ",accuracy,"%")    
-    f=open("/root/model.txt","w")
+    f=open("/root/accuracy.txt","w")
     f.write(b)
     f.close()
     model.save("/root/mnist.h5")
