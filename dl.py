@@ -18,7 +18,6 @@ model = Sequential()
 
 model.add(Dense(units=64, input_shape=(13,), activation='relu'))
 model.add(Dense(units=32, activation="relu"))
-model.add(Dense(units=16, activation="relu"))
 model.add(Dense(units=3, activation='softmax'))
 
 model.compile(loss='categorical_crossentropy', metrics=['accuracy'], optimizer=Adam())
