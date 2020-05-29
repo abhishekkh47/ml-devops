@@ -36,7 +36,7 @@ model.summary()
 if (accuracy < 80.0):
 	b=("the model has been trained sussesfully with the accuracy of ",accuracy,"%")    
 	f=open("/root/accuracy.txt","w")
-	f.write(b)
+	f.write(b[1])
 	f.close()
 	print("less than 80")
     #	execfile("/root/print.py")
