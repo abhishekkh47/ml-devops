@@ -4,7 +4,7 @@ from keras.layers import Dense
 from keras.models import Sequential
 from sklearn.model_selection import train_test_split
 
-dataset = pd.read_csv('/mnt/wines.csv')
+dataset = pd.read_csv('/root/wines.csv')
 
 y = dataset['Class']
 
