@@ -33,12 +33,12 @@ fitting = model.fit(X_train, y_train_cat, epochs=epoch,verbose=False)
 accuracy=fitting.history['accuracy'][-1] *100
 model.summary()
 
-if (accuracy < 97.0):
+if (accuracy < 80.0):
 	b=("the model has been trained sussesfully with the accuracy of ",accuracy,"%")    
     f=open("/root/accuracy.txt","w")
     f.write(b)
     f.close()
-	print("less than 97")
+	print("less than 80")
     #	execfile("/root/print.py")
 else:
     b=("the model has been trained sussesfully with the accuracy of ",accuracy,"%")    
