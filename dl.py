@@ -30,10 +30,10 @@ accuracy = accuracy[1]*100
 print(accuracy)
 
 import os
-os.system("touch /mnt/accuracy.txt")
-os.system("echo {} > /mnt/accuracy.txt".format(accuracy))
+os.system("touch /root/accuracy.txt")
+os.system("echo {} > /root/accuracy.txt".format(accuracy))
 
-model.save('/mnt/multiclassNN.h5')
+model.save('/root/multiclassNN.h5')
 
 
 
