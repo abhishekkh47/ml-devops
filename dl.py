@@ -31,7 +31,7 @@ print(accuracy)
 
 import os
 os.system("touch /root/accuracy.txt")
-os.system("echo {} > /root/accuracy.txt".format(accuracy))
+os.system("echo {} > /root/accuracy.txt".format(int(accuracy)))
 
 model.save('/root/multiclassNN.h5')
 
