@@ -38,5 +38,5 @@ else:
 	acc = os.popen("cat /root/accuracy.txt")
 	if accuracy > acc:
 	    os.system("touch /root/accuracy.txt")
-		os.system("echo {} > /root/accuracy.txt".format(int(accuracy)))
-		model.save('/root/wines_model.h5')
+	    os.system("echo {} > /root/accuracy.txt".format(int(accuracy)))
+	    model.save('/root/wines_model.h5')
