@@ -29,10 +29,14 @@ accuracy = accuracy[1]*100
 print(accuracy)
 
 import os
-os.system("touch /root/accuracy.txt")
-os.system("echo {} > /root/accuracy.txt".format(int(accuracy)))
-
-model.save('/root/wines_model.h5')
-
-
-
+f = os.system("ls /root/accuracy.txt &> /dev/null")
+if f!=0:
+	os.system("touch /root/accuracy.txt")
+	os.system("echo {} > /root/accuracy.txt".format(int(accuracy)))
+	model.save('/root/wines_model.h5')
+else:
+	acc = os.popen("cat /root/accuracy.txt")
+	if accuracy > acc:
+	    os.system("touch /root/accuracy.txt")
+		os.system("echo {} > /root/accuracy.txt".format(int(accuracy)))
+		model.save('/root/wines_model.h5')
