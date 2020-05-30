@@ -36,7 +36,8 @@ if f!=0:
 	model.save('/root/wines_model.h5')
 else:
 	acc = os.popen("cat /root/accuracy.txt")
-	if accuracy > acc:
+	acc1 = acc.read()
+	if accuracy > acc1:
 	    os.system("touch /root/accuracy.txt")
 	    os.system("echo {} > /root/accuracy.txt".format(int(accuracy)))
 	    model.save('/root/wines_model.h5')
