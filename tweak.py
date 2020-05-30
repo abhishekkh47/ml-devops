@@ -1,7 +1,7 @@
 import os
 import time
 it=1
-while it<=5:
+while it<=4:
 	it+=1
 	acc = os.popen("cat /root/Desktop/tasks/mlops/accuracy.txt")
 	acc1 = acc.read()
