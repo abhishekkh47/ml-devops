@@ -1,5 +1,5 @@
 import os
-
+import time
 it=1
 while it<=5:
 	it+=1
@@ -28,6 +28,7 @@ while it<=5:
 	        exit()
 	    os.system("sed -i '/softmax/ i {}' /root/Desktop/tasks/mlops/dl.py".format(y))
 	    os.system("curl -u admin:redhat http://192.168.99.101:8080/job/mlt-job2/build?token=tweak")
+	    time.sleep(120)
 	    acc = os.popen("cat /root/Desktop/tasks/mlops/accuracy.txt")
 	    acc1 = acc.read()
 	    print(acc1)
